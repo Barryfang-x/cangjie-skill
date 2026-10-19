@@ -21,6 +21,10 @@
 
 </div>
 
+## 66 秒了解仓颉 Skill
+
+https://github.com/user-attachments/assets/87a2cf7b-2114-48aa-aecd-2640a667db40
+
 ## 官方网站
 
 🌐 [访问 Cangjie Skill 官方网站](https://cangjie-skill.com/)
@@ -86,6 +90,8 @@ dsh web
 ## 它是怎么工作的
 
 cangjie-skill 使用 **RIA-TV++** 流水线，先把书籍、视频转写、播客文字稿、访谈记录等原始文本变成可复用的 Capability Bundle，再编译为可安装的 skill。整个过程分七个阶段：
+
+> **脚本依赖**：`scripts/` 下的确定性脚本需要 **Python 3.10+** 与 **PyYAML**（`python3 -m pip install pyyaml`）。缺 PyYAML 时 `python3 scripts/cangjie.py doctor` 自检仍可运行并给出安装指引。可选依赖：`tiktoken`、`jsonschema`。
 
 1. **整体内容理解（Adler 分析）**——借鉴 Mortimer Adler 的分析阅读法，对整份内容做结构、解释、批判、应用四步拆解，产出 `BOOK_OVERVIEW.md`
 2. **并行提取**——同时派 5 个专项提取器（框架、原则、案例、反例、术语），从原文中提取候选方法论单元
